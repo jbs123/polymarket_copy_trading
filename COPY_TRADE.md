@@ -1,6 +1,7 @@
 # Copy Trade Bot — Requirements & Build Spec
 
-**Repo:** `copytrade` (separate from `lab` and `weatherbot`)
+**Repo:** `polymarket_copy_trading
+` (separate from `lab` and `weatherbot`)
 **Sister docs:** ARCHITECTURE.md, CONTENT_OPERATIONS.md
 **Audience:** Multiple AI agents working in parallel — UI agent, backend agent, data agent, etc. Each agent owns specific components defined in §2.
 **Status:** v1 spec. v2 features explicitly deferred and called out.
