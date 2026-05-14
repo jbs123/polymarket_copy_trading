@@ -2,3 +2,19 @@ venv/
 __pycache__/
 *.pyc
 *.log
+
+# Secrets
+.env
+*.env
+
+# Runtime data — bot state, not source
+*.db
+*.csv
+*.bak_*
+
+# Local scratch / experiments
+scratch.py
+
+# Next.js build artifacts
+copytrade/dashboard/.next/
+copytrade/dashboard/node_modules/

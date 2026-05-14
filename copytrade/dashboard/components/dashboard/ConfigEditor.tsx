@@ -8,45 +8,35 @@ import { AlertCircle } from "lucide-react"
 
 export function ConfigEditor() {
   return (
-    <div className="space-y-6 max-w-4xl">
+    <div className="space-y-6 max-w-4xl animate-in fade-in zoom-in-95">
 
-      <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 flex items-start space-x-3">
-        <AlertCircle className="h-5 w-5 text-amber-600 mt-0.5" />
-        <div>
-          <h4 className="text-sm font-medium text-amber-800">Configuration Editor (Read-Only Preview)</h4>
-          <p className="text-xs text-amber-700 mt-1">
-            This UI is currently displaying a read-only preview of `/etc/copytrade/config.yaml`.
-            In the full implementation, changes here will write back to the Jetson via API.
-          </p>
-        </div>
-      </div>
 
       {/* Global Settings */}
-      <Card>
+      <Card className="glass-panel border-transparent">
         <CardHeader>
-          <CardTitle>Global Settings</CardTitle>
-          <CardDescription>Bot-wide configuration and capital mode.</CardDescription>
+          <CardTitle className="text-white drop-shadow-sm">Global Settings</CardTitle>
+          <CardDescription className="text-slate-400">Bot-wide configuration and capital mode.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="grid gap-4 md:grid-cols-2">
-            <div className="space-y-2 border rounded-md p-4 bg-muted/20">
-              <label className="text-sm font-medium leading-none">Capital Mode</label>
+            <div className="space-y-2 border border-white/10 rounded-md p-4 bg-white/[0.02]">
+              <label className="text-sm font-semibold text-slate-300 leading-none">Capital Mode</label>
               <div className="flex items-center space-x-2 mt-2">
-                <Badge variant={botStatus.capitalMode === 'paper' ? 'secondary' : 'default'} className="uppercase">
+                <Badge variant="outline" className={`border-none font-bold uppercase ${botStatus.capitalMode === 'paper' ? 'bg-white/10 text-white' : 'bg-emerald-500/20 text-emerald-400'}`}>
                   {botStatus.capitalMode}
                 </Badge>
-                <Button variant="outline" size="sm" className="h-7 text-xs ml-auto">
+                <Button variant="outline" size="sm" className="h-7 text-xs ml-auto border-white/10 bg-transparent text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
                   Promote to Live
                 </Button>
               </div>
-              <p className="text-[10px] text-muted-foreground mt-2">Requires confirmation dialog.</p>
+              <p className="text-[10px] text-slate-500 mt-2">Requires confirmation dialog.</p>
             </div>
 
-            <div className="space-y-2 border rounded-md p-4 bg-muted/20">
-               <label className="text-sm font-medium leading-none">Global Sizing Default</label>
+            <div className="space-y-2 border border-white/10 rounded-md p-4 bg-white/[0.02]">
+               <label className="text-sm font-semibold text-slate-300 leading-none">Global Sizing Default</label>
                <div className="flex items-center mt-2">
-                 <span className="text-sm mr-2">$</span>
-                 <input type="number" disabled value="1.00" className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors opacity-50 cursor-not-allowed" />
+                 <span className="text-sm mr-2 text-slate-400">$</span>
+                 <input type="number" disabled value="1.00" className="flex h-9 w-full rounded-md border border-white/10 bg-black/20 px-3 py-1 text-sm shadow-sm transition-colors opacity-50 cursor-not-allowed text-white" />
                </div>
             </div>
           </div>
@@ -54,61 +44,61 @@ export function ConfigEditor() {
       </Card>
 
       {/* Risk Limits (Read Only per spec) */}
-      <Card>
+      <Card className="glass-panel border-transparent">
         <CardHeader>
-          <CardTitle>Hard Risk Limits</CardTitle>
-          <CardDescription>These are enforced at the engine level. Modifying requires SSH access.</CardDescription>
+          <CardTitle className="text-white drop-shadow-sm">Hard Risk Limits</CardTitle>
+          <CardDescription className="text-slate-400">These are enforced at the engine level. Modifying requires SSH access.</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid gap-2 text-sm">
-            <div className="flex justify-between py-2 border-b">
-              <span className="text-muted-foreground">Total Bot Exposure Cap</span>
-              <span className="font-medium">$100.00</span>
+          <div className="grid gap-2 text-sm bg-white/[0.02] p-4 rounded-md border border-white/10">
+            <div className="flex justify-between py-2 border-b border-white/5">
+              <span className="text-slate-400">Total Bot Exposure Cap</span>
+              <span className="font-semibold text-white">$100.00</span>
             </div>
-            <div className="flex justify-between py-2 border-b">
-              <span className="text-muted-foreground">Per-Trader Exposure Cap</span>
-              <span className="font-medium">$50.00</span>
+            <div className="flex justify-between py-2 border-b border-white/5">
+              <span className="text-slate-400">Per-Trader Exposure Cap</span>
+              <span className="font-semibold text-white">$50.00</span>
             </div>
-            <div className="flex justify-between py-2 border-b">
-              <span className="text-muted-foreground">Per-Market Exposure Cap</span>
-              <span className="font-medium">$5.00</span>
+            <div className="flex justify-between py-2 border-b border-white/5">
+              <span className="text-slate-400">Per-Market Exposure Cap</span>
+              <span className="font-semibold text-white">$5.00</span>
             </div>
-            <div className="flex justify-between py-2 border-b">
-              <span className="text-muted-foreground">Single-Trade Max Size</span>
-              <span className="font-medium">$5.00</span>
+            <div className="flex justify-between py-2 border-b border-white/5">
+              <span className="text-slate-400">Single-Trade Max Size</span>
+              <span className="font-semibold text-white">$5.00</span>
             </div>
-             <div className="flex justify-between py-2 border-b">
-              <span className="text-muted-foreground">Daily Loss Limit</span>
-              <span className="font-medium">$20.00</span>
+             <div className="flex justify-between py-2 border-b border-transparent">
+              <span className="text-slate-400">Daily Loss Limit</span>
+              <span className="font-semibold text-rose-400 drop-shadow-sm">$20.00</span>
             </div>
           </div>
         </CardContent>
       </Card>
 
       {/* Default Filters */}
-      <Card>
+      <Card className="glass-panel border-transparent">
         <CardHeader>
-          <CardTitle>Default Filters</CardTitle>
-          <CardDescription>Global latency and drift constraints.</CardDescription>
+          <CardTitle className="text-white drop-shadow-sm">Default Filters</CardTitle>
+          <CardDescription className="text-slate-400">Global latency and drift constraints.</CardDescription>
         </CardHeader>
         <CardContent>
            <div className="grid gap-4 md:grid-cols-3">
               <div className="space-y-1">
-                <label className="text-xs font-medium">Max Latency (sec)</label>
-                <input type="number" disabled value="5" className="flex h-8 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm opacity-50 cursor-not-allowed" />
+                <label className="text-xs font-semibold text-slate-300">Max Latency (sec)</label>
+                <input type="number" disabled value="5" className="flex h-8 w-full rounded-md border border-white/10 bg-black/20 px-3 py-1 text-sm opacity-50 cursor-not-allowed text-white" />
               </div>
               <div className="space-y-1">
-                <label className="text-xs font-medium">Max Price Drift (%)</label>
-                <input type="number" disabled value="3" className="flex h-8 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm opacity-50 cursor-not-allowed" />
+                <label className="text-xs font-semibold text-slate-300">Max Price Drift (%)</label>
+                <input type="number" disabled value="3" className="flex h-8 w-full rounded-md border border-white/10 bg-black/20 px-3 py-1 text-sm opacity-50 cursor-not-allowed text-white" />
               </div>
               <div className="space-y-1">
-                <label className="text-xs font-medium">Slippage Tolerance (%)</label>
-                <input type="number" disabled value="2.0" className="flex h-8 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm opacity-50 cursor-not-allowed" />
+                <label className="text-xs font-semibold text-slate-300">Slippage Tolerance (%)</label>
+                <input type="number" disabled value="2.0" className="flex h-8 w-full rounded-md border border-white/10 bg-black/20 px-3 py-1 text-sm opacity-50 cursor-not-allowed text-white" />
               </div>
            </div>
         </CardContent>
         <CardFooter>
-          <Button disabled>Save Settings</Button>
+          <Button disabled className="bg-cyan-500/50 text-white cursor-not-allowed border-transparent">Save Settings</Button>
         </CardFooter>
       </Card>
     </div>

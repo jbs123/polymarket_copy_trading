@@ -1,0 +1,155 @@
+{
+  "traders": [
+    {
+      "wallet": "0xeebde7a0e019a63e6b476eb425505b7b3e6eba30",
+      "nickname": "bonereaper",
+      "enabled": true,
+      "capitalMode": "paper",
+      "followModes": {
+        "followBuys": true,
+        "counterBuys": false,
+        "followSells": true,
+        "buyOnSells": false,
+        "counterSells": false
+      },
+      "copySide": "both",
+      "sizing": {
+        "usdPerTrade": 5
+      },
+      "risk": {
+        "maxTotalExposureUsd": 50
+      },
+      "performance": {
+        "pnlContribution": 0,
+        "tradesCopied": 0
+      }
+    },
+    {
+      "wallet": "0x2a2c53bd278c04da9962fcf96490e17f3dfb9bc1",
+      "nickname": "0x2a2c53bd278c04da9962fcf96490e17f3dfb9bc1",
+      "enabled": true,
+      "capitalMode": "paper",
+      "followModes": {
+        "followBuys": true,
+        "counterBuys": false,
+        "followSells": true,
+        "buyOnSells": false,
+        "counterSells": false
+      },
+      "copySide": "both",
+      "sizing": {
+        "usdPerTrade": 5
+      },
+      "risk": {
+        "maxTotalExposureUsd": 50
+      },
+      "performance": {
+        "pnlContribution": 0,
+        "tradesCopied": 0
+      }
+    },
+    {
+      "wallet": "0xa5ea13a81d2b7e8e424b182bdc1db08e756bd96a",
+      "nickname": "0xa5ea13a81d2b7e8e424b182bdc1db08e756bd96a",
+      "enabled": true,
+      "capitalMode": "paper",
+      "followModes": {
+        "followBuys": true,
+        "counterBuys": false,
+        "followSells": true,
+        "buyOnSells": false,
+        "counterSells": false
+      },
+      "copySide": "both",
+      "sizing": {
+        "usdPerTrade": 5
+      },
+      "risk": {
+        "maxTotalExposureUsd": 50
+      },
+      "performance": {
+        "pnlContribution": 0,
+        "tradesCopied": 0
+      }
+    },
+    {
+      "wallet": "0x9f2fe025f84839ca81dd8e0338892605702d2ca8",
+      "nickname": "0x9f2fe025f84839ca81dd8e0338892605702d2ca8",
+      "enabled": true,
+      "capitalMode": "paper",
+      "followModes": {
+        "followBuys": true,
+        "counterBuys": false,
+        "followSells": true,
+        "buyOnSells": false,
+        "counterSells": false
+      },
+      "copySide": "both",
+      "sizing": {
+        "usdPerTrade": 5
+      },
+      "risk": {
+        "maxTotalExposureUsd": 50
+      },
+      "performance": {
+        "pnlContribution": 0,
+        "tradesCopied": 0
+      }
+    },
+    {
+      "wallet": "0xe0229e10a858860218b6132f4234602c47bd6603",
+      "nickname": "JetFadil",
+      "enabled": true,
+      "capitalMode": "paper",
+      "followModes": {
+        "followBuys": true,
+        "counterBuys": false,
+        "followSells": true,
+        "buyOnSells": false,
+        "counterSells": false
+      },
+      "copySide": "both",
+      "sizing": {
+        "usdPerTrade": 5
+      },
+      "risk": {
+        "maxTotalExposureUsd": 50
+      },
+      "performance": {
+        "pnlContribution": 0,
+        "tradesCopied": 0
+      }
+    },
+    {
+      "wallet": "0x8ef6a1cc3fb81a0e2c3eb405a09ce497a23563ee",
+      "nickname": "bozo-1",
+      "enabled": true,
+      "capitalMode": "paper",
+      "followModes": {
+        "followBuys": true,
+        "counterBuys": false,
+        "followSells": true,
+        "buyOnSells": false,
+        "counterSells": false
+      },
+      "copySide": "both",
+      "sizing": {
+        "usdPerTrade": 5
+      },
+      "risk": {
+        "maxTotalExposureUsd": 50
+      },
+      "performance": {
+        "pnlContribution": 0,
+        "tradesCopied": 0
+      }
+    }
+  ],
+  "globalSettings": {
+    "maxLatencySec": 60,
+    "maxPriceDriftPct": 3,
+    "slippageTolerancePct": 2,
+    "totalBotExposureCap": 500,
+    "dailyLossLimit": 20
+  }
+}
